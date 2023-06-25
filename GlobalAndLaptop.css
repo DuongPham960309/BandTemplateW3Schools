@@ -1,0 +1,411 @@
+/*GLOBAL*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --MBFontSize: 16px;
+  --MBPadding: 12px;
+}
+
+/*BASIC CLASS*/
+.Num, .BBtn {
+  background-color: black;
+  color: white;
+}
+
+.SoldOut, .RBtn {
+  background-color: red;
+  color: white;
+}
+
+button:hover, .GHovered:hover {
+  background-color: #e2dbdb;
+  color: black;
+}
+
+/*HALF SPECIAL CLASS*/
+#Tour, #Home, .MMaxWidth {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.PayBtn, .DCBackground {
+  background-color: darkcyan;
+  color: white;
+}
+
+.Month, .CFlex {
+  display: flex;
+  align-items: center;
+}
+
+.SBFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+#Contact, #Band, .CoreWidth {
+  margin: 0 auto;
+}
+@media (max-width: 799px) {
+  #Contact, #Band, .CoreWidth {
+    width: calc(100% - 32px);
+  }
+}
+@media (min-width: 800px) {
+  #Contact, #Band, .CoreWidth {
+    width: 768px;
+  }
+}
+
+.CityLine2, .ContactLine2, .TourLine2, .BandLine2, .CLine2, .Line2 {
+  color: gray;
+}
+
+.ContactLine2, .TourLine2, .BandLine2, .CLine2 {
+  text-align: center;
+}
+
+/*SPECIAL CLASS*/
+.ImgGrid {
+  display: grid;
+  justify-content: space-around;
+}
+@media (max-width: 600px) {
+  .ImgGrid {
+    grid-template-columns: 60%;
+  }
+}
+@media (min-width: 601px) {
+  .ImgGrid {
+    grid-template-columns: repeat(3, 20%);
+  }
+}
+
+.BBtn {
+  padding: 10px 15px;
+}
+
+/*==============================*/
+.RBtn {
+  padding: 10px 15px;
+}
+
+.Header {
+  text-align: center;
+  font-size: 27px;
+  letter-spacing: 5px;
+}
+
+/*ELEMENT*/
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  display: block;
+  border-width: 0;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0;
+  border: 1px solid gray;
+}
+
+/*tool bar*/
+.Bar601, .Bar600 {
+  display: none;
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+@media (max-width: 600px) {
+  .Bar600 {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) {
+  .Bar601 {
+    display: flex;
+  }
+}
+
+.RMItem, .MItemA, .MItem {
+  display: block;
+  padding: var(--MBPadding);
+  font-size: var(--MBFontSize);
+  line-height: 1;
+  color: white;
+}
+
+.MItemA {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*=======================================*/
+.RMItem {
+  margin-left: auto;
+}
+.RMItem:hover {
+  background-color: red;
+}
+
+.SubBar {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: calc(var(--MBFontSize) + 2 * var(--MBPadding));
+}
+:hover > .SubBar {
+  display: block;
+}
+
+.SItem {
+  display: block;
+  width: 150px;
+  padding: 8px;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+/*home*/
+#Home {
+  padding-top: calc(var(--MBFontSize) + 2 * var(--MBPadding));
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.HomeDiv {
+  position: absolute;
+  text-align: center;
+  bottom: 45px;
+  width: 100%;
+  z-index: 2;
+}
+
+.HomeCity {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+/*the band*/
+#Band {
+  padding-top: 75px;
+  padding-bottom: 105px;
+}
+
+.BandLine2 {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.BandP {
+  text-align: justify;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.Name {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 18px;
+}
+
+.BandImg {
+  border-radius: 4px;
+}
+
+/*tour dates*/
+#Tour {
+  background-color: black;
+  padding-top: 75px;
+  padding-bottom: 105px;
+}
+
+.TourLine2 {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.TourTable {
+  background-color: white;
+  margin-bottom: 35px;
+}
+
+.Month {
+  border: 1px solid gray;
+  border-bottom-width: 0;
+  padding-left: 14px;
+  color: gray;
+  height: 39px;
+}
+.Month:last-child {
+  border-bottom-width: 1px;
+}
+
+.SoldOut {
+  padding: 3px 5px;
+  margin-left: 15px;
+}
+
+.Num {
+  padding: 4px 5px 2px 5px;
+  border-radius: 50%;
+  margin: 0 14px 0 auto;
+}
+
+.CityGrid {
+  display: grid;
+  gap: 15px;
+}
+@media (min-width: 601px) {
+  .CityGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.City {
+  padding: 20px 15px 15px;
+  background-color: white;
+}
+
+.CityLine2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.CityP {
+  padding-bottom: 15px;
+}
+
+/*tickets*/
+#TicketsBG {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Tickets {
+  position: relative;
+  margin: auto;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .Tickets {
+    width: calc(100% - 20px);
+  }
+}
+@media (min-width: 601px) {
+  .Tickets {
+    width: 500px;
+  }
+}
+@media (min-width: 769px) {
+  .Tickets {
+    width: 600px;
+  }
+}
+@media (min-width: 993px) {
+  .Tickets {
+    width: 900px;
+  }
+}
+
+.CloseI {
+  float: right;
+  margin-left: auto;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.Tickets > div > p {
+  clear: both;
+  padding-bottom: 45px;
+}
+
+.TForm {
+  background-color: white;
+  padding: 0px 16px 16px;
+}
+
+.Label {
+  padding: 18px 0;
+}
+
+.PayBtn {
+  width: 100%;
+  padding: 20px;
+  margin: 16px 0 32px;
+}
+
+/*contact*/
+#Contact {
+  padding-top: 75px;
+  padding-bottom: 105px;
+}
+
+.ContactLine2 {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.ContactGrid {
+  display: grid;
+}
+@media (min-width: 601px) {
+  .ContactGrid {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.ContactI {
+  width: 30px;
+}
+
+.CInput {
+  display: block;
+  margin: 10px 0px 15px;
+}
+
+.FormGrid {
+  display: grid;
+  gap: 10px 16px;
+}
+@media (min-width: 601px) {
+  .FormGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.FooterI {
+  color: #494646;
+  padding-bottom: 25px;
+}
+.FooterI:hover {
+  color: gray;
+}/*# sourceMappingURL=GlobalAndLaptop.css.map */

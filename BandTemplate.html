@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="GlobalAndLaptop.css">
+    <link rel="stylesheet" href="Widths.css">
+</head>
+<body>
+    <!--tool bar-->
+    <nav class="Bar600">
+        <div class="SBFlex">
+            <a class="MItemA GHovered" href="#Home">home</a>
+            <i class="fa fa-bars MItem GHovered" onclick="OnOffSB600()"></i>
+        </div>
+        <div style="display: none;">
+            <a class="MItemA GHovered" href="#Band" onclick="OnOffSB600()">band</a>
+            <a class="MItemA GHovered" href="#Tour" onclick="OnOffSB600()">tour</a>
+            <a class="MItemA GHovered" href="#Contact" onclick="OnOffSB600()">contact</a>
+            <a class="MItemA GHovered" href="" onclick="OnOffSB600()">merch</a>
+        </div>
+    </nav>
+
+    <nav class="Bar601">
+        <a class="MItemA GHovered" href="#Home">home</a>
+        <a class="MItemA GHovered" href="#Band">band</a>
+        <a class="MItemA GHovered" href="#Tour">tour</a>
+        <a class="MItemA GHovered" href="#Contact">contact</a>
+        <div style="position: relative;">
+            <a class="MItemA GHovered" href="">more <i class="fa fa-caret-down"></i></a>
+            <nav class="SubBar">
+                <a class="SItem GHovered" href="#">Merchandise</a>
+                <a class="SItem GHovered" href="#">Extras</a>
+                <a class="SItem GHovered" href="#">Media</a>
+            </nav>
+        </div>
+        <i class="fa fa-search RMItem"></i>
+    </nav>
+    
+    <!--home-->
+    <div id="Home">
+        <img src="Image/image1.png" alt="">
+        <div class="HomeDiv">
+            <p class="HomeCity">Chicago</p>
+            <p>Thank you, Chicago - A night we won't forget.</p>
+        </div>
+    </div>
+    
+    <!--the band-->
+    <div id="Band">
+        <p class="Header">THE BAND</p>
+        <p class="BandLine2"><i>We love music</i></p>
+        <p class="BandP">
+            We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
+            laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+            commodo consequat.
+        </p>
+        <div class="ImgGrid">
+            <div>
+                <p class="Name">Name</p>
+                <img class="BandImg" src="Image/image4.png" alt="">
+            </div>
+            <div>
+                <p class="Name">Name</p>
+                <img class="BandImg" src="Image/image4.png" alt="">
+            </div>
+            <div>
+                <p class="Name">Name</p>
+                <img class="BandImg" src="Image/image4.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--tour dates-->
+    <div id="Tour">
+        <div class="CoreWidth">
+            <p class="Header" style="color: white;">TOUR DATES</p>
+            <p class="TourLine2"><i>Remember book your tickets!</i></p>
+            <div class="TourTable">
+                <p class="Month">September <span class="SoldOut">Sold out</span></p>
+                <p class="Month">October <span class="SoldOut">Sold out</span></p>
+                <p class="Month">November <span class="Num">3</span></p>
+            </div>
+            <div class="CityGrid">
+                <div>
+                    <img src="Image/image5.png" alt="">
+                    <div class="City">
+                        <p><b>New York</b></p>
+                        <p class="CityLine2">Fri 27 Nov 2016</p>
+                        <p class="CityP">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="BBtn" onclick="ShowTickets()">Buy Tickets</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="Image/image6.png" alt="">
+                    <div class="City">
+                        <p><b>Paris</b></p>
+                        <p class="CityLine2">Sat 28 Nov 2016</p>
+                        <p class="CityP">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="BBtn" onclick="ShowTickets()">Buy Tickets</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="Image/image7.png" alt="">
+                    <div class="City">
+                        <p><b>San Francisco</b></p>
+                        <p class="CityLine2">Sun 29 Nov 2016</p>
+                        <p class="CityP">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button class="BBtn" onclick="ShowTickets()">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--tickets-->
+    <div id="TicketsBG">
+        <div class="Tickets">
+            <div class="DCBackground">
+                <div><p class="CloseI GHovered" onclick="HideTickets()">x</p></div>
+                <p class="Header"><i class="fa fa-suitcase"></i>Tickets</p>
+            </div>
+            <div class="TForm">
+                <form action="">
+                    <p class="Label"><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</p>
+                    <input type="text" placeholder="How many?">
+                    <p class="Label"><i class="fa fa-user"></i> Send To</p>
+                    <input type="text" placeholder="Enter email">
+                    <button class="PayBtn">PAY<i class="fa fa-check"></i></button>
+                </form>
+                <div class="CFlex" style="justify-content: space-between;">
+                    <button class="RBtn" onclick="HideTickets()">Close <i class="fa fa-times"></i></button>
+                    <p>Need <a style="color: rgb(77, 80, 212);" href="">Help?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--contact-->
+    <div id="Contact">
+        <p class="Header">CONTACT</p>
+        <p class="ContactLine2"><i>Fan? Drop a note!</i></p>
+        <div class="ContactGrid">
+            <div style="padding-bottom: 16px;">
+                <p><i class="fa fa-map-marker ContactI"></i>Chicago, US</p>
+                <p><i class="fa fa-phone ContactI"></i>Phone: +00 151515</p>
+                <p><i class="fa fa-envelope ContactI"></i>Email: mail@mail.com</p>
+            </div>
+            <form action="Contact.js">
+                <div class="FormGrid">
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="text" name="Email" placeholder="Email" required>
+                </div>
+                <input class="CInput" type="text" name="Message" placeholder="Message" required>
+                <button class="BBtn" style="margin-left: auto;" type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+    
+    <img src="Image/image8.png" alt="">
+
+    <footer>
+        <div>
+            <i class="fa fa-facebook-official FooterI" style="font-size: 25px;"></i>
+            <i class="fa fa-instagram FooterI" style="font-size: 25px;"></i>
+            <i class="fa fa-snapchat FooterI" style="font-size: 25px;"></i>
+            <i class="fa fa-pinterest-p FooterI" style="font-size: 25px;"></i>
+            <i class="fa fa-twitter FooterI" style="font-size: 25px;"></i>
+            <i class="fa fa-linkedin FooterI" style="font-size: 25px;"></i>
+        </div>
+        <div class="Line2">
+            Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="Line2">w3.css</a>
+        </div>
+    </footer>
+    
+    <script src="BandTemplate.js"></script>
+</body>
+</html>
